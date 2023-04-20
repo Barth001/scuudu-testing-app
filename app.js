@@ -1,12 +1,16 @@
 const express = require('express');
-const port = process.env.port || 5000;
+const bodyParser = require('body-parser');
+const routers = require("./src/router/indexRoute");
 const app = express();
 
-// response to send for GET request from browser
-app.get('/', (req, res) => {
-    res.send('App is firing!');
-});
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json())
+
+
+app.use("/api/v1", routers);
 
 // listening for connections to app
+const port = process.env.port || 5000;
 app.listen(port, () => { console.log(`The server is running at port ${port}`); });
-module.exports = app
+module.exports = app;
