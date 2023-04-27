@@ -4,7 +4,6 @@ const IndexController = require("../controller/indexController");
 const router = express.Router();
 
 
-router.get("/testing", IndexController.testing);
 router.post("/contact", IndexController.contact);
 router.post("/subscrib", IndexController.subscrib);
 
