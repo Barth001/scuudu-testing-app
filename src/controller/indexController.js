@@ -39,9 +39,9 @@ class IndexController {
     };
     request(options, function (error, response) {
     if (!error){
-        return res.status(200).send({message: "You have been added to our audience!"});
+        res.status(200).send({message: "You have been added to our audience!"});
     }else {
-        return res.status(500).send({message: "Try again later"});
+        res.status(500).send({message: "Try again later"});
         }
     });
 }
