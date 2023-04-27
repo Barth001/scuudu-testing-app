@@ -5,5 +5,7 @@ const router = express.Router();
 
 
 router.get("/testing", IndexController.testing);
+router.post("/contact", IndexController.contact);
+router.post("/subscrib", IndexController.subscrib);
 
 module.exports = router;
