@@ -25,6 +25,3 @@ const mainMail = async (name, email, message) => {
   }
 
   module.exports = mainMail
-
-  // 5078fe707d7a8ce14d6a66338bcffa6c-us14
-  // 857aabec3b
