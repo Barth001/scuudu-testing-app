@@ -3,17 +3,17 @@ const app = require("../app");
 
 describe("POST /", () => {
 
-    describe("When pass fullname, email and message", function(){
+    describe("When pass fullname, email and message", () =>{
 
-        it("should respond with 200 status code", function(done) {
-            this.timeout(20000)
+        it("should respond with 200 status code", (done) =>{
 
             const response = request(app).post("/api/v1/contact").send({
-                fullName: "Barth",
-                email: "barth11@gmail.com",
+                fullName: "exmple",
+                email: "example@gmail.com",
                 message: "working.."
             });
-            response.expect(200, done)
+            response.expect(200)
+            done()
             
         })
     })
@@ -21,15 +21,15 @@ describe("POST /", () => {
 
 describe("POST /", () => {
 
-    describe("When pass email address", function(){
+    describe("When pass email address", () =>{
 
-        it("should respond with 200 status code", function(done) {
-            this.timeout(20000)
+        it("should respond with 200 status code", (done) =>{
 
             const response = request(app).post("/api/v1/subscrib").send({
-                email_address: "barth11@gmail.com",
+                email_address: "example@gmail.com",
             });
-            response.expect(200, done)
+            response.expect(200)
+            done()
             
         })
     })
